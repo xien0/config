@@ -1,0 +1,41 @@
+spring:
+  application:
+    name: admachine
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    hikari:
+      maxLifetime: 1765000
+      maximumPoolSize: 50
+      minimumIdle: 1
+      connectionTimeout: 30000
+      idleTimeout: 600000
+      pool-name: database-admachine-pool
+      connection-init-sql: select 1 from dual
+mybatis:
+  configuration:
+    multiple-result-sets-enabled: true
+    map-underscore-to-camel-case: true
+    default-fetch-size: 100
+    jdbc-type-for-null: null
+  mapper-locations: mappers/**/*.xml
+---
+spring:
+  profiles: default
+  datasource:
+    username: root
+    password: AIni..1221
+    url: jdbc:mysql://47.92.228.137/admachine?useSSL=false
+  redis:
+    host: 47.92.228.137
+    password: _1234567890_
+logging:
+  file: F:\\logfile\\admachine.log
+  level:
+    root: info
+    com.admachine.biz: debug
+
+xiaomi:
+  customer-service:
+    apiHost: test.xiaomi.com
+    secret: gg
+message: chenfei
