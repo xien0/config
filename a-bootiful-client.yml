@@ -21,18 +21,6 @@ mybatis:
 ---
 spring:
   profiles: default
-  datasource:
-    username: root
-    password: AIni..1221
-    url: jdbc:mysql://47.92.228.137/admachine?useSSL=false
-  redis:
-    host: 47.92.228.137
-    password: _1234567890_
-logging:
-  file: F:\\logfile\\admachine.log
-  level:
-    root: info
-    com.admachine.biz: debug
 
 xiaomi:
   customer-service:
